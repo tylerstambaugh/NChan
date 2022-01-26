@@ -9,13 +9,13 @@ namespace NChan.Data
         [Key]
         public int id { get; set; }
         [Required]
-        string Title { get; set; }
+        public string Title { get; set; }
         [Required]
-        string Text { get; set; }
+        public string Text { get; set; }
         [Required]
-        List<Comment> comments { get; set; }
+        public virtual List<Comment> Comments { get; set; }
         [Required]
-        List<Like> likes { get; set; }
+        public virtual List<Like> Likes { get; set; }
         Guid AuthorId { get; set; }
     }
 }
