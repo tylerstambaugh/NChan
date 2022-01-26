@@ -90,12 +90,22 @@
     <Compile Include="IdentityUserLoginConfiguration.cs" />
     <Compile Include="IdentityUserRoleConfiguration.cs" />
     <Compile Include="Like.cs" />
+    <Compile Include="Migrations\202201260146019_FirstMigration.cs" />
+    <Compile Include="Migrations\202201260146019_FirstMigration.Designer.cs">
+      <DependentUpon>202201260146019_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202201260146019_FirstMigration.resx">
+      <DependentUpon>202201260146019_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
