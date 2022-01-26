@@ -206,6 +206,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -310,6 +311,14 @@
     <ProjectReference Include="..\NChan.Data\NChan.Data.csproj">
       <Project>{93964B9C-E9EE-4281-A67B-C648E97EB82B}</Project>
       <Name>NChan.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NChan.Models\NChan.Models.csproj">
+      <Project>{468824C5-3A02-4A66-8F77-003B9E2EB934}</Project>
+      <Name>NChan.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NChan.Services\NChan.Services.csproj">
+      <Project>{E21016ED-8F81-4C1A-B234-722F7BA9FA25}</Project>
+      <Name>NChan.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
