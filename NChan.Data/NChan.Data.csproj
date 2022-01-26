@@ -94,6 +94,10 @@
     <Compile Include="Migrations\202201260146019_FirstMigration.Designer.cs">
       <DependentUpon>202201260146019_FirstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201260240545_UpdatedAuthorIDEntity.cs" />
+    <Compile Include="Migrations\202201260240545_UpdatedAuthorIDEntity.Designer.cs">
+      <DependentUpon>202201260240545_UpdatedAuthorIDEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +109,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201260146019_FirstMigration.resx">
       <DependentUpon>202201260146019_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201260240545_UpdatedAuthorIDEntity.resx">
+      <DependentUpon>202201260240545_UpdatedAuthorIDEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
