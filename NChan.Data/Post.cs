@@ -16,6 +16,7 @@ namespace NChan.Data
         public virtual List<Comment> Comments { get; set; }
         [Required]
         public virtual List<Like> Likes { get; set; }
-        Guid AuthorId { get; set; }
+        
+        public Guid AuthorId { get; set; }
     }
 }
