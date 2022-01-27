@@ -12,10 +12,10 @@ namespace NChan.WebAPI.Controllers
     [Authorize]
     public class CommentController : ApiController
     {
-        public IHttpActionResult Get()
+        public IHttpActionResult GetAllCommentsForPost([FromUri] int postId)
         {
             var cService = CreateCommentService();
-            var comments = cService.GetComments();
+            var comments = cService.GetCommentByPostId(postId);
             return Ok(comments);
         }
 
@@ -32,10 +32,10 @@ namespace NChan.WebAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Get(int id)
+        public IHttpActionResult GetAllCommentsForAuthor(Guid authorId)
         {
             var cService = CreateCommentService();
-            var comment = cService.GetCommentById(id);
+            var comment = cService.GetCommentByAuthorId(authorId);
             return Ok(comment);
         }
 
