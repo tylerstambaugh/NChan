@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace NChan.Models
 {
-    public class CommentCreate
+    public class PostCreate
     {
-        [Required]
-        public int PostId { get; set; }
 
-        [MaxLength(100, ErrorMessage = "There are too many charcters in this field. (Max 100)")]
+        //public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
         [Required]
         public string Text { get; set; }
-
-        //[Required]
-        //public Guid AuthorId { get; set; }
+       
     }
 }
+

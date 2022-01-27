@@ -1,4 +1,5 @@
-﻿using NChan.Models;
+﻿using Microsoft.AspNet.Identity;
+using NChan.Models;
 using NChan.Services;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,8 @@ namespace NChan.WebAPI.Controllers
 
         private CommentService CreateCommentService()
         {
-            var commentService = new CommentService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var commentService = new CommentService(userId);
             return commentService;
         }
     }

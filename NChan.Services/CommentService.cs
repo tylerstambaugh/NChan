@@ -10,13 +10,20 @@ namespace NChan.Services
 {
     public class CommentService
     {
+        private readonly Guid _userId;
+
+        public CommentService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateComment(CommentCreate model)
         {
             var entity =
                 new Comment()
                 {
-                    Id = model.Id,
-                    Text = model.Text
+                    PostId = model.PostId,
+                    Text = model.Text,
+                    AuthorId =_userId
                 };
 
             using (var ctx = new ApplicationDbContext())

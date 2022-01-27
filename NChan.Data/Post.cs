@@ -13,9 +13,9 @@ namespace NChan.Data
         [Required]
         public string Text { get; set; }
         [Required]
-        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
         [Required]
-        public virtual List<Like> Likes { get; set; }
+        public virtual List<Like> Likes { get; set; } = new List<Like>();
         
         public Guid AuthorId { get; set; }
     }
