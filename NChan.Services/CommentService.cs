@@ -33,22 +33,22 @@ namespace NChan.Services
             }
         }
 
-        public IEnumerable<CommentListItem> GetComments()
-
+        public IEnumerable<CommentListItem> GetCommentByPostId(int postId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Comments
-                        .Select(
-                            e =>
-                                new CommentListItem
-                                {
-                                    Id = e.Id,
-                                    Text = e.Text
-                                }
-                                );
+                    .Comments.Where(c => c.PostId == postId)
+                    .Select(
+                        c =>
+                            new CommentListItem
+                            {
+                                Id = c.Id,
+                                Text = c.Text,
+                                PostId = c.PostId
+                            }
+                        );
                 return query.ToArray();
             }
         }
