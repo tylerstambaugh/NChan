@@ -7,15 +7,16 @@ namespace NChan.Data
     public class Post
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         [Required]
-        string Title { get; set; }
+        public string Title { get; set; }
         [Required]
-        string Text { get; set; }
+        public string Text { get; set; }
         [Required]
-        List<Comment> comments { get; set; }
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
         [Required]
-        List<Like> likes { get; set; }
-        Guid AuthorId { get; set; }
+        public virtual List<Like> Likes { get; set; } = new List<Like>();
+        
+        public Guid AuthorId { get; set; }
     }
 }
