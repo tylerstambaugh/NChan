@@ -62,6 +62,9 @@
     <Compile Include="CommentEdit.cs" />
     <Compile Include="CommentListItem.cs" />
     <Compile Include="PostModels\PostCreate.cs" />
+    <Compile Include="PostModels\PostDetail.cs" />
+    <Compile Include="PostModels\PostEdit.cs" />
+    <Compile Include="PostModels\PostListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
