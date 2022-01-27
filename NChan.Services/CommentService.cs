@@ -53,6 +53,26 @@ namespace NChan.Services
             }
         }
 
+        public IEnumerable<CommentListItem> GetCommentByAuthorId(Guid authorId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Comments.Where(c => c.AuthorId == authorId)
+                    .Select(
+                        c =>
+                            new CommentListItem
+                            {
+                                Id = c.Id,
+                                Text = c.Text,
+                                PostId = c.PostId,
+                            }
+                        );
+                return query.ToArray();
+            }
+        }
+
         public CommentDetail GetCommentById(int commentId)
         {
             using (var ctx = new ApplicationDbContext())
